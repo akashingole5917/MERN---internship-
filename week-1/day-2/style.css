@@ -1,0 +1,22 @@
+body {
+ font-family: 'Poppins', sans-serif;
+ background-color: lightgray;
+ margin: 0;
+ padding: 20px;
+}
+.main-box {
+ background-color: white;
+ padding: 20px;
+ margin: 20px;
+ border: 2px solid black;
+}
+.box {
+ background-color: #e8f0fe;
+ padding: 15px;
+ margin: 15px;
+ border: 1px solid gray;
+}
+h1 {
+ color: darkblue;
+ text-align: center;
+}
