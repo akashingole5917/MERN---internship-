@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Day 5 - DOM Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Day 5 Tasks</h1>
+
+<!-- Bonus: Theme Switcher -->
+<button onclick="lightTheme()">Light Theme</button>
+<button onclick="darkTheme()">Dark Theme</button>
+
+<!-- Task 1: Interactive Buttons -->
+<h2>Task 1: Interactive Text Controls</h2>
+<p id="myText">Hello I am Akash Ingole - BCA Student</p>
+
+<div class="box">
+<p>Change Color:</p>
+<button onclick="changeColor('red')">RED</button>
+<button onclick="changeColor('green')">GREEN</button>
+<button onclick="changeColor('blue')">BLUE</button>
+</div>
+
+<div class="box">
+<p>Change Font:</p>
+<select onchange="changeFont(this.value)">
+<option value="Arial">Arial</option>
+<option value="Times New Roman">Times New Roman</option>
+<option value="Courier New">Courier</option>
+</select>
+</div>
+
+<div class="box">
+<p>Change Size:</p>
+<button onclick="increaseSize()">A+</button>
+<button onclick="decreaseSize()">A-</button>
+</div>
+
+<div class="box">
+<p>Font Style (mouseover):</p>
+<button onmouseover="makeBold()" onmouseout="makeNormal()">Bold</button>
+<button onmouseover="makeItalic()" onmouseout="makeNormal()">Italic</button>
+<button onmouseover="makeUnderline()" onmouseout="makeNormal()">Underline</button>
+</div>
+
+<!-- Task 2: Form Validation -->
+<h2>Task 2: Form Validation</h2>
+<div class="box">
+<input type="text" id="nameInput" placeholder="Enter Name">
+<p id="nameError" class="error"></p>
+<input type="email" id="emailInput" placeholder="Enter Email">
+<p id="emailError" class="error"></p>
+<button onclick="validateForm()">Submit</button>
+</div>
+
+<!-- Task 3: Calculator -->
+<h2>Task 3: Simple Calculator</h2>
+<div class="box">
+<input type="number" id="num1" placeholder="First Number">
+<input type="number" id="num2" placeholder="Second Number">
+<br><br>
+<button onclick="calc('add')">Add</button>
+<button onclick="calc('sub')">Subtract</button>
+<button onclick="calc('mul')">Multiply</button>
+<button onclick="calc('div')">Divide</button>
+<p id="calcResult"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
