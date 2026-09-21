@@ -1,0 +1,44 @@
+body {
+ font-family: Arial, sans-serif;
+ padding: 20px;
+}
+
+h1 { text-align: center; }
+
+/* Task 1 - Flexbox */
+.flex-container {
+ display: flex;
+ gap: 15px;
+}
+
+.flex-box {
+ background-color: lightblue;
+ border: 1px solid black;
+ padding: 20px;
+ flex: 1;
+ text-align: center;
+}
+
+/* On mobile - stack vertically */
+@media (max-width: 600px) {
+ .flex-container {
+   flex-direction: column;
+ }
+}
+
+/* Task 2 - Grid Gallery */
+.gallery {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ gap: 10px;
+ margin-top: 20px;
+}
+
+.photo {
+ background-color: lightgray;
+ border: 1px solid black;
+ height: 100px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
