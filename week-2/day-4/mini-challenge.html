@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Directory</title>
+<style>
+body{font-family: Arial; text-align: center;}
+.users{display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px;}
+.card{border:1px solid #ddd; width:180px; padding:10px; border-radius:8px;}
+img{border-radius:50%;}
+button{padding:10px 20px; margin-top:10px;}
+</style>
+</head>
+<body>
+<h2>User Directory</h2>
+<button onclick="loadUsers()">Refresh Users</button>
+<div class="users" id="users"></div>
+
+<script>
+async function loadUsers(){
+ const res = await fetch("https://randomuser.me/api/?results=6");
+ const data = await res.json();
+ let output = "";
+ data.results.forEach(u => {
+  output += `<div class="card">
+   <img src="${u.picture.medium}">
+   <h4>${u.name.first} ${u.name.last}</h4>
+   <p style="font-size:12px">${u.email}</p>
+  </div>`;
+ });
+ document.getElementById("users").innerHTML = output;
+}
+loadUsers();
+</script>
+</body>
+</html>
