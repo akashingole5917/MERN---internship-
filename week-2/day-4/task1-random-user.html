@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random User</title>
+<style>
+body{font-family: Arial; text-align: center; margin-top: 50px;}
+#card{border:1px solid #ccc; padding:20px; width:250px; margin:auto; border-radius:10px;}
+img{border-radius:50%;}
+button{margin-top:15px; padding:8px 15px;}
+</style>
+</head>
+<body>
+<div id="card">
+<img id="photo" src="" width="100">
+<h3 id="name"></h3>
+<p id="email"></p>
+<button onclick="loadUser()">New User</button>
+</div>
+
+<script>
+async function loadUser(){
+ const res = await fetch("https://randomuser.me/api");
+ const data = await res.json();
+ const user = data.results[0];
+ document.getElementById("photo").src = user.picture.large;
+ document.getElementById("name").innerText = user.name.first + " " + user.name.last;
+ document.getElementById("email").innerText = user.email;
+}
+loadUser();
+</script>
+</body>
+</html>
