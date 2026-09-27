@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiple Users</title>
+<style>
+body{font-family: Arial;}
+.container{display:flex; flex-wrap: wrap; gap:15px; justify-content: center;}
+.card{border:1px solid #ccc; padding:15px; width:200px; text-align:center; border-radius:8px;}
+img{border-radius:50%;}
+</style>
+</head>
+<body>
+<h2 style="text-align:center">Random Users</h2>
+<div class="container" id="container"></div>
+
+<script>
+async function loadUsers(){
+ const res = await fetch("https://randomuser.me/api/?results=5");
+ const data = await res.json();
+ let html = "";
+ data.results.forEach(user => {
+  html += `
+   <div class="card">
+    <img src="${user.picture.medium}">
+    <h4>${user.name.first} ${user.name.last}</h4>
+    <p>${user.email}</p>
+   </div>
+  `;
+ });
+ document.getElementById("container").innerHTML = html;
+}
+loadUsers();
+</script>
+</body>
+</html>
