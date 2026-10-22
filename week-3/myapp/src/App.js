@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Greeting from "./components/Greeting";
 import ProfileCard from "./components/ProfileCard";
+import CounterApp from "./components/CounterApp";
+import UserForm from "./components/UserForm";
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <Header />
       <main style={{padding: "20px", textAlign: "center"}}>
         <h2>Welcome to My React App!</h2>
-        <p>This is my first modular React layout.</p>
+        <p>This is my first modular React layout with State.</p>
         
         <Greeting name="Priya" topic="React Components" />
         <Greeting name="Rohan" topic="JSX & Props" />
@@ -27,6 +29,11 @@ function App() {
             image="https://randomuser.me/api/portraits/women/44.jpg"
           />
         </div>
+
+        <hr style={{margin: "20px"}} />
+        <CounterApp />
+        <UserForm />
+
       </main>
       <Footer />
     </div>
