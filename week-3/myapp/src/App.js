@@ -5,6 +5,8 @@ import Greeting from "./components/Greeting";
 import ProfileCard from "./components/ProfileCard";
 import CounterApp from "./components/CounterApp";
 import UserForm from "./components/UserForm";
+import UserList from "./UserList";
+import Posts from "./Posts";
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
       <Header />
       <main style={{padding: "20px", textAlign: "center"}}>
         <h2>Welcome to My React App!</h2>
-        <p>This is my first modular React layout with State.</p>
+        <p>Week 3 - Components, State, useEffect & API</p>
         
         <Greeting name="Priya" topic="React Components" />
         <Greeting name="Rohan" topic="JSX & Props" />
@@ -33,6 +35,10 @@ function App() {
         <hr style={{margin: "20px"}} />
         <CounterApp />
         <UserForm />
+        
+        <hr style={{margin: "20px"}} />
+        <UserList />
+        <Posts />
 
       </main>
       <Footer />
